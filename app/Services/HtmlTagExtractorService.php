@@ -21,4 +21,3 @@ class HtmlTagExtractorService
         return $tags;
     }
 }
-

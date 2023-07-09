@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body class="bg-gray-100 flex justify-center items-center min-h-screen">
+     <a href="/" class="home-button bg-black text-white rounded-full px-4 py-2">Home</a>
     <div class="bg-white rounded-lg shadow mx-auto p-8 overflow-auto">
 
          @if ($error)
@@ -34,6 +35,3 @@
     </div>
 </body>
 </html>
-
-
-

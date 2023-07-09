@@ -11,19 +11,18 @@ use App\Services\HtmlTagCounterService;
 class PhpNetParcerService implements HtmlParserCounterInterface
 {
     public function __construct(
-        private HtmlContentFetcherService $contentFetcher, 
-        private HtmlTagExtractorService $tagExtractor, 
-        private HtmlTagCounterService $tagCounterService, 
-        private string $url) 
-    {
+        private HtmlContentFetcherService $contentFetcher,
+        private HtmlTagExtractorService $tagExtractor,
+        private HtmlTagCounterService $tagCounterService,
+        private string $url
+    ) {
     }
 
     public function getContedTags(): TagCounter
     {
-            $html = $this->contentFetcher->getHtmlContent($this->url);
-            $tags = $this->tagExtractor->extractTags($html);
-            $tagCounter = $this->tagCounterService->countTags($tags);
-            return  $tagCounter;
+        $html = $this->contentFetcher->getHtmlContent($this->url);
+        $tags = $this->tagExtractor->extractTags($html);
+        $tagCounter = $this->tagCounterService->countTags($tags);
+        return  $tagCounter;
     }
 }
-

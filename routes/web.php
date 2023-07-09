@@ -1,10 +1,6 @@
 <?php
 
 use App\Http\Controllers\HtmlParserController;
-use App\Services\HtmlContentFetcherService;
-use App\Services\HtmlTagCounterService;
-use App\Services\HtmlTagExtractorService;
-use App\Services\HtmlResultPresenterService;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,21 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-     return view('welcome');
+    return view('welcome');
 });
 
+
+Route::get('/storage', function () {
+    return view('storage');
+});
+
+
 Route::get('/parser', [HtmlParserController::class, 'parseAndDisplay']);
-
-// Route::get('/parser', function () {
-
-//         $url = 'https://www.php.net/';
-//         $contentFetcher = new HtmlContentFetcherService();
-//         $tagExtractor = new HtmlTagExtractorService();
-//         $tagCounterService = new HtmlTagCounterService();
-//         $resultPresenter = new HtmlResultPresenterService();
-
-//      $html = $contentFetcher->getHtmlContent($url);
-//             $tags = $tagExtractor->extractTags($html);
-//             $tagCounter = $tagCounterService->countTags($tags);
-//             $resultPresenter->displayResult($tagCounter);
-// });
