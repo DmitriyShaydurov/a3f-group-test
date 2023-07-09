@@ -1,0 +1,46 @@
+/* CSS code */
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    max-width: 900px;
+    min-height: 100vh;
+    margin: auto;
+}
+
+#menu {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+#menu>* {
+    margin: 10px;
+}
+
+#menu input {
+    flex-grow: 1;
+    color: black;
+}
+
+.item {
+    text-align: center;
+}
+
+.bordered-input {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+@media (max-width: 575px) {
+    #menu {
+        flex-direction: column;
+    }
+
+    #menu input {
+        width: auto;
+    }
+}

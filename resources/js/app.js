@@ -1,7 +1,7 @@
 require('./bootstrap');
 
 import { createApp } from 'vue';
-import StorageExample from './components/StorageExample.vue';
+import StorageExample from './components/storage/StorageExample.vue';
 
 const app = createApp({});
 

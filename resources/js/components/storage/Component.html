@@ -1,0 +1,11 @@
+<div id="app">
+    <div id="menu">
+        <button @click="first">Первая</button>
+        <input type="text" v-model="index" class="bordered-input">
+        <button @click="go">Перейти</button>
+        <button @click="last">Последняя</button>
+    </div>
+    <div id="content">
+        <div v-for="(string, i) in strings" :key="i" :id="'item-' + i" class="item">{{ string }}</div>
+    </div>
+</div>

@@ -1,64 +1,141 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Тестовое задание A3F Group: PHP-fullstack разработчик
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Тестовое задание 1
 
-## About Laravel
+### Описание
+1. Реализовать ES6-класс хранилища, который может хранить внутри себе массив строк. Класс должен иметь метод `init`, который ожидает 1 секунду, затем заполняет массив случайными строками (не менее 500 элементов), затем ожидает 1 секунду, после чего завершает свою работу. Класс должен также иметь метод `get`, который возвращает массив строк.
+2. Сверстать страницу, которая содержит основной блок, шириной не более 900px и с минимальной высотой 100% высоты страницы. Основной блок должен находиться по центру страницы и содержать в себе:
+    - однострочный горизонтальный блок меню, содержащий кнопку "Первая", текстовое поле ввода, кнопку "Перейти", кнопку "Последняя". Текстовое поле ввода должно быть растянуто на всю оставшуюся ширину родительского блока. При уменьшении ширины экрана должна изменяться ширина только поля ввода. При достижении ширины экрана в 575px, элементы меню должны выстраиваться в колонку, вместо строки.
+    - блок содержимого в одну колонку, куда должны быть выведены строки из хранилища сразу после того как будет вызван метод init.
+3. При нажатии на кнопку "Последняя", должен выполняться вертикальный скролл до последнего элемента блока содержимого, чтобы последний элемент быть виден. При нажатии на кнопку "Первая", должен выполняться скролл до первого элемента блока содержимого. При вводе числа (валидация не требуется) в текстовое поле и нажатии на кнопку "Перейти", должен выполняться скролл до элемента блока содержимого с индексом, соответствующим введенному числу.
+4. Инстанцирование хранилища и вызов метода init должны выполняться, когда страница будет загружена полностью.
+5. Можно использовать любые сторонние библиотеки, фреймворки.
+6. Будет плюсом, если скролл будет плавным.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Тестовое задание 2
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Описание
+Написать на PHP парсер html страницы (на входе url), который на выходе будет отображать количество и название всех используемых html тегов. Использование готовых парсеров и библиотек запрещено, включая модуль DOM.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Задача обязательно должна быть выполнена с использованием ООП подхода, демонстрирующего основные принципы структурирования и взаимодействия объектов. Не нужно придерживаться принципа KISS, приветствуется преувеличение уровня абстракции.
 
-## Learning Laravel
+Основная цель задания не получить верный ответ, а продемонстрировать какие либо навыки организации кода с использованием ООП. Допускаются предположения не описанные в задаче, оверкодинг.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+По завершению тестового задания, определитесь для себя, сколько времени у вас ушло на выполнение задачи и сообщите нам. Использование ООП обязательно.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Установка проекта
 
-## Laravel Sponsors
+### Требования
+Перед установкой проекта убедитесь, что у вас установлены следующие компоненты:
+- PHP версии 7.3 или выше
+- Composer
+- Docker
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Шаги установки
 
-### Premium Partners
+1. Клонируйте репозиторий проекта на вашу локальную машину.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```shell
+git clone <URL репозитория>
+```
 
-## Contributing
+2. Перейдите в директорию проекта.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```shell
+cd a3f-group-test
+```
 
-## Code of Conduct
+3. Установите зависимости, выполнив команду:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```shell
+composer install
+```
 
-## Security Vulnerabilities
+4. Создайте файл `.env` на основе `.env.example` и настройте соответствующие переменные окружения.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```shell
+cp .env.example .env
+```
 
-## License
+5. Запустите контейнеры Docker, используя Laravel Sail.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```shell
+./vendor/bin/sail up
+```
+
+6. Подключитесь к контейнеру приложения Laravel Sail, выполнив команду:
+
+```shell
+./vendor/bin/sail shell
+```
+
+7. Выполните установку зависимостей фронтенд-части проекта:
+
+```shell
+npm install
+```
+
+8. Выполните сборку фронтенд-ресурсов при помощи Laravel Mix:
+
+```shell
+npm run dev
+```
+
+9. Веб-приложение Laravel должно быть доступно по адресу [http://localhost](http://localhost).
+
+### Завершение работы
+
+Чтобы остановить работу контейнеров Docker, выполните команду:
+
+```shell
+./vendor/bin/sail down
+```
+
+Это остановит все контейнеры, связанные с проектом Laravel.
+
+## Описание проекта
+
+Проект **a3f-group-test** является веб-приложением на базе фреймворка Laravel.
+
+Основные компоненты проекта включают:
+- **Laravel Sail**: Предоставляет среду разработки с помощью Docker для запуска приложения и его зависимостей.
+- **Vue.js**: Используется для разработки фронтенд-части приложения, обеспечивая динамический интерфейс пользователя.
+
+Проект разработан с использованием современных инструментов и технологий, включая Laravel, Vue.js и Docker, что облегчает развертывание и разработку.
+## Обзор примененных принципов ООП и паттернов проектирования
+
+В предоставленном коде применяются следующие принципы объектно-ориентированного программирования (ООП) и паттерны проектирования:
+
+1. **Принцип единственной ответственности (Single Responsibility Principle, SRP):**
+   - Класс `HtmlContentFetcherService` отвечает только за получение HTML-контента с помощью cURL.
+   - Класс `HtmlTagExtractorService` отвечает только за извлечение HTML-тегов из строки HTML-контента.
+   - Класс `HtmlTagCounterService` отвечает только за подсчет тегов в массиве HTML-тегов.
+   - Класс  StringStorage отвечает только за управление хранилищем строк и их генерацию.
+   - Класс  компонента Vue не выполняет других функций, кроме управления хранилищем строк и предоставления данных для представления.
+
+2. **Принцип инверсии зависимостей (Dependency Inversion Principle, DIP):**
+   - Класс `PhpNetParcerService` зависит от абстракции `HtmlParserCounterInterface`, а не от конкретных реализаций. Это позволяет гибко заменять реализацию интерфейса без изменения кода, что упрощает тестирование и поддержку.
+
+3. **Внедрение зависимостей (Dependency Injection, DI):**
+   - Класс `PhpNetParcerService` внедряет зависимости в конструкторе через свойства. Это позволяет внедрять зависимости извне и обеспечивает лучшую читаемость и тестируемость кода.
+
+4. **Паттерн "Фабричный метод" (Factory Method):**
+   - Класс `AppServiceProvider` содержит фабричный метод `register()`, который создает экземпляр класса `PhpNetParcerService`.
+
+5. **Паттерн "Стратегия" (Strategy):**
+   - Интерфейс `HtmlParserCounterInterface` определяет метод `getContedTags()`, который представляет алгоритм подсчета тегов. Реализация этого интерфейса в классе `PhpNetParcerService` позволяет заменять алгоритм подсчета тегов без изменения клиентского кода.
+
+6. **Паттерн "Наблюдатель" (Observer):**
+   - Класс `HtmlParserController` действует как наблюдаемый объект, который оповещает своих наблюдателей (представление) о результатах парсинга.
+
+7. **Паттерн "Фасад" (Facade):**
+   - Класс `HtmlParserController` предоставляет удобный интерфейс для взаимодействия с парсером, скрывая сложность и детали внутренней реализации.
+
+8. **Паттерн "Адаптер" (Adapter):**
+   - В предоставленном коде нет прямого примера паттерна "Адаптер". Однако, класс `HtmlContentFetcherService` можно рассматривать как адаптер для взаимодействия с внешней библиотекой (cURL).
+
+9. **Паттерн "Модель-Представление-Контроллер" (Model-View-Controller, MVC):**
+    - Класс `HtmlParserController` представляет контроллер, который управляет взаимодействием с моделью (сервисом) и представлением (шаблоном представления).
+
+## Время выполнения задачи
+На выполнение задачи потрачено порядка 16 часов более половины времени ушло на настройку среды и проекта, что не являлось обязательным, однако поскольку в описании вакансии была указана необходимость умения работы с **Laravel**, **Docker**, **VueJs**  - решил использовать эти технологии

@@ -2,7 +2,7 @@
 
 namespace App\Contracts;
 
-use \App\Libraries\TagCounter;
+use App\Libraries\TagCounter;
 
 interface HtmlParserCounterInterface
 {

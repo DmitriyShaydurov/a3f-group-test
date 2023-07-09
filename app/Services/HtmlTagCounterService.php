@@ -16,5 +16,3 @@ class HtmlTagCounterService
         return $tagCounter;
     }
 }
-
-
