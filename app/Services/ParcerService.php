@@ -8,7 +8,7 @@ use App\Services\HtmlContentFetcherService;
 use App\Services\HtmlTagExtractorService;
 use App\Services\HtmlTagCounterService;
 
-class PhpNetParcerService implements HtmlParserCounterInterface
+class ParcerService implements HtmlParserCounterInterface
 {
     public function __construct(
         private HtmlContentFetcherService $contentFetcher,
